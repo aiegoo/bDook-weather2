@@ -71,7 +71,7 @@ $(".tabs > li").click(function(){
 			//https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=02efdd64bdc14b279bc91d9247db4722&units=metric    	//daily
 			//https://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=02efdd64bdc14b279bc91d9247db4722&units=metric 		//weekly
 			data: {
-				id: "1835848",
+				id: "1846266",
 				appid: "02efdd64bdc14b279bc91d9247db4722",
 				units: "metric"
 			},
