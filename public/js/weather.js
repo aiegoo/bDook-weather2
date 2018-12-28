@@ -52,20 +52,22 @@ function dailyFn(data) {
 }
 
 function weeklyFn(data) {
-	//log("weekly", data);
 	var html = '';
 	var v = '';
-	for(var in data.list)
-
-	html = `
-	// 여기에 태그 조합을 삽입하고 그중 데이타를 바다야 할 부분만 수정함
-	<ul class="clear">
-	<li><img src="" alt=""></li>
-	<li class="wk_time"></li>
-	<li class="wk_main"></li>
-	<li class="wk_temp"></li>
-	<li class="wk_wind"></li>
-</ul>
-	`;
-$(".weekly")
+	for(var i in data.list) {
+		v = data.list[i];
+		html = `
+		<ul class="clear">
+			<li><img src="../imges/icon/${v.weather[0].icon}.png" class="img"></li>
+			<li class="wk_time"><span>${v.dt_txt}</span></li>
+			<li class="wk_main">
+				<span>날씨:</span> ${v.weather[0].main}(${v.weather[0].description}) 
+			</li>
+			<li class="wk_temp">
+				<span>온도:</span> ${v.main.temp}도 (${v.main.temp_min} / ${v.main.temp_max})</li>
+			<li class="wk_wind"><span>바람:</span> ${v.wind.speed}ms(${v.wind.deg}deg)</li>
+		</ul>
+		`;
+		$(".weekly").append(html);
+	}
 }
