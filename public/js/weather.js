@@ -27,7 +27,7 @@ $(".tabs > li").click(function(){
 			dataType: "json",
 			data: {
 				id: "1835848",
-				appid: "02efdd64bdc14b279bc91d9247db4722",
+				appid: "af147f11a0bdb42f9a8efd152f7bbbf2",
 				units: "metric"
 			},
 			success: function(data){
@@ -52,5 +52,20 @@ function dailyFn(data) {
 }
 
 function weeklyFn(data) {
-	log("weekly"+data);
+	//log("weekly", data);
+	var html = '';
+	var v = '';
+	for(var in data.list)
+
+	html = `
+	// 여기에 태그 조합을 삽입하고 그중 데이타를 바다야 할 부분만 수정함
+	<ul class="clear">
+	<li><img src="" alt=""></li>
+	<li class="wk_time"></li>
+	<li class="wk_main"></li>
+	<li class="wk_temp"></li>
+	<li class="wk_wind"></li>
+</ul>
+	`;
+$(".weekly")
 }
